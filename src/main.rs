@@ -2,13 +2,11 @@
 
 mod app;
 
-use eframe::egui;
-
 // When compiling natively:
 #[cfg(not(target_arch = "wasm32"))]
 fn main() -> eframe::Result {
 	let native_options = eframe::NativeOptions {
-		viewport: egui::ViewportBuilder::default()
+		viewport: eframe::egui::ViewportBuilder::default()
 			.with_inner_size([400.0, 300.0])
 			.with_min_inner_size([300.0, 220.0]),
 		..Default::default()
@@ -33,7 +31,7 @@ fn main() {
 			.start(
 				"the_canvas_id",
 				web_options,
-				Box::new(|cc| Ok(Box::new(eframe_template::TemplateApp::new(cc)))),
+				Box::new(|cc| Ok(Box::new(app::TemplateApp::new(cc)))),
 			)
 			.await;
 
