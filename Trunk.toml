@@ -1,0 +1,3 @@
+[build]
+public_url = "https://swarkin.github.io/RustWebTest2"
+minify = "on_release"
