@@ -1,9 +1,3 @@
-console.log("I should not be running");
-console.log("I should not be running");
-console.log("I should not be running");
-console.log("I should not be running");
-console.log("I should not be running");
-
 var cacheName = 'egui-template-pwa';
 var filesToCache = [
   './',
